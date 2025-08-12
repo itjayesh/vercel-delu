@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { AppProvider } from "./context/AppContext"
 import { SupabaseProvider } from "./components/SupabaseProvider"
 import { AuthProvider } from "./components/AuthProvider"
-import ProtectedRoute from "./components/ProtectedRoute"
-import AdminProtectedRoute from "./components/AdminProtectedRoute"
-import Header from "./components/Header"
+import { ProtectedRoute } from "./components/ProtectedRoute"
+import { AdminProtectedRoute } from "./components/AdminProtectedRoute"
+import { Header } from "./components/Header"
+import { AuthModal } from "./components/AuthModal"
 import LiveGigs from "./pages/LiveGigs"
 import MyGigs from "./pages/MyGigs"
 import CreateGig from "./pages/CreateGig"
@@ -56,7 +57,7 @@ function App() {
                     }
                   />
                   <Route
-                    path="/refer"
+                    path="/refer-and-earn"
                     element={
                       <ProtectedRoute>
                         <ReferAndEarn />
@@ -73,6 +74,7 @@ function App() {
                   />
                 </Routes>
               </main>
+              <AuthModal />
             </div>
           </Router>
         </AppProvider>

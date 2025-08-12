@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --brand-primary: #3b82f6;
@@ -73,7 +73,7 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
     --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
@@ -152,6 +152,22 @@
 
   .touch-button {
     @apply min-h-[44px] min-w-[44px];
+  }
+
+  .gig-card {
+    @apply bg-white rounded-lg shadow-md p-4 border border-gray-200 hover:shadow-lg transition-shadow;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-lg p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto;
   }
 }
 
@@ -259,4 +275,9 @@
     min-height: 44px;
     min-width: 44px;
   }
+}
+
+.touch-friendly {
+  min-height: 44px;
+  min-width: 44px;
 }

@@ -1,0 +1,8 @@
+{
+  "name": "delu.live",
+  "description": "A peer-to-peer delivery platform for college campuses. This version runs entirely on the frontend with mock data.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "prompt": "The application is now running in frontend-only mode with mock data. The Appwrite backend has been removed."
+}
